@@ -27,7 +27,7 @@ static void list_inocs(Sys *sys, char *input) {
 
     // Check if the input is "u\n", which means listing all users' inoculations.
     if (strcmp(input, "u\n") == 0) {
-        for (i = 0; i <= sys->cntusers - 1; i++) { /////////////////////////////////////////
+        for (i = 0; i < sys->cntusers; i++) { 
             print_inoculation(&sys->dataI[i]);
         }
         return;
@@ -41,7 +41,7 @@ static void list_inocs(Sys *sys, char *input) {
     }
 
     // Iterate through the list of users to find a match for the extracted username.
-    for (i = 0; i <= sys->cntusers - 1; i++) { ////////////////////////////////////////////
+    for (i = 0; i < sys->cntusers; i++) { 
         if (strcmp(sys->dataI[i].username, username) == 0) {
             print_inoculation(&sys->dataI[i]);
             userexists = 1;
