@@ -105,7 +105,6 @@ int main(int argc, char *argv[]) {
             case 'd': delete_app_user(&sys, input); break;
             case 'u': list_inocs(&sys, input); break;
             case 't': skip_date(&sys, input); break;
-            case 'm': m(&sys, input); break;
             default: break;
         }
     }
